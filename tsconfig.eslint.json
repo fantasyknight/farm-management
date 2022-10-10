@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    // repeated from base config's "include" setting
+    "src",
+    "tests",
+
+    // these are the eslint-only inclusions
+    ".eslintrc.js"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "src/components/budget/react-data-export.d.ts"
+    ]
+  }
+}

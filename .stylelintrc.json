@@ -1,0 +1,195 @@
+{
+  "extends": "stylelint-config-recommended",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "function",
+          "return",
+          "include",
+          "mixin",
+          "each",
+          "extend",
+          "extends",
+          "for",
+          "if",
+          "else"
+        ]
+      }
+    ],
+    "block-no-empty": null,
+    "unit-whitelist": [
+      "px",
+      "%",
+      "vh",
+      "vw",
+      "deg",
+      "s",
+      "em",
+      "rem",
+      "fr",
+      "vmin",
+      "vmax"
+    ],
+    "order/properties-order": [
+      [
+        {
+          "groupName": "presentation",
+          "order": "flexible",
+          "emptyLineBefore": "never",
+          "properties": [
+            "content",
+            "display",
+            "flex-flow",
+            "flex-direction",
+            "flex-wrap",
+            "align-items",
+            "justify-content",
+            "align-content",
+            "order",
+            "flex-grow",
+            "flex-shrink",
+            "flex-basis",
+            "flex",
+            "align-self",
+            "float"
+          ]
+        },
+        {
+          "groupName": "dimensions",
+          "order": "flexible",
+          "emptyLineBefore": "always",
+          "properties": [
+            "height",
+            "max-height",
+            "min-height",
+            "width",
+            "max-width",
+            "min-width",
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left"
+          ]
+        },
+        {
+          "groupName": "position",
+          "order": "flexible",
+          "emptyLineBefore": "always",
+          "properties": [
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left"
+          ]
+        },
+        {
+          "groupName": "reflection",
+          "order": "flexible",
+          "emptyLineBefore": "always",
+          "properties": [
+            "background",
+            "background-color",
+            "background-image",
+            "background-repeat",
+            "background-attachment",
+            "background-position",
+            "background-clip",
+            "background-origin",
+            "background-size",
+            "border",
+            "border-top",
+            "border-top-color",
+            "border-top-style",
+            "border-top-width",
+            "border-right",
+            "border-right-color",
+            "border-right-style",
+            "border-right-width",
+            "border-bottom",
+            "border-bottom-color",
+            "border-bottom-style",
+            "border-bottom-width",
+            "border-left",
+            "border-left-color",
+            "border-left-style",
+            "border-left-width",
+            "border-style",
+            "border-color",
+            "border-width",
+            "border-radius",
+            "box-shadow",
+            "list-style-type",
+            "fill",
+            "stroke"
+          ]
+        },
+        {
+          "groupName": "text",
+          "order": "flexible",
+          "emptyLineBefore": "always",
+          "properties": [
+            "font",
+            "speak",
+            "font-family",
+            "font-size",
+            "color",
+            "text-align",
+            "text-decoration",
+            "text-transform",
+            "text-indent",
+            "letter-spacing",
+            "line-height",
+            "text-direction",
+            "text-shadow",
+            "word-spacing",
+            "font-weight"
+          ]
+        },
+        {
+          "groupName": "other",
+          "order": "flexible",
+          "emptyLineBefore": "always",
+          "properties": [
+            "transform",
+            "z-index",
+            "transition",
+            "transition-property",
+            "transition-duration",
+            "transition-delay",
+            "transition-timing-function",
+            "cursor",
+            "animation",
+            "animation-name",
+            "animation-duration",
+            "animation-timing-function",
+            "animation-delay",
+            "animation-iteration-count",
+            "animation-direction",
+            "animation-fill-mode",
+            "animation-play-state",
+            "overflow",
+            "overflow-y",
+            "overflow-x",
+            "user-select",
+            "resize",
+            "opacity",
+            "visibility"
+          ]
+        }
+      ]
+    ]
+  }
+}

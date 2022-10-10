@@ -1,0 +1,28 @@
+@import '../../../styles/variables';
+
+.icon-space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 12px;
+
+  &--blue {
+    background-color: rgba(56, 183, 227, 0.1);
+  }
+
+  &--green {
+    background-color: rgba(41, 181, 28, 0.1);
+  }
+
+  &--purple {
+    background-color: rgba(185, 127, 243, 0.1);
+  }
+
+  &--orange {
+    background-color: rgba(249, 174, 0, 0.1);
+  }
+}

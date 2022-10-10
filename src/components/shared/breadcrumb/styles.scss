@@ -1,0 +1,9 @@
+@import '../../../styles/variables';
+
+.ant-breadcrumb > span:last-child a .paragrapgh{
+  color: $black-4 !important;
+}
+
+span.ant-breadcrumb-separator {
+  margin: 0 14px;
+}

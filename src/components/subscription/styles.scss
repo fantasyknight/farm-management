@@ -1,0 +1,278 @@
+@import '../../styles/variables';
+
+.payment-card {
+  &.ant-radio-wrapper {
+    padding: 15px 24px 15px 16px;
+
+    background-color: $white;
+    border: 1px solid $gray-8;
+    border-radius: 12px
+  }
+
+  &.ant-radio-wrapper-checked {
+    background-color: $gray-7;
+    border: 1px solid $blue-0;
+  }
+
+  &.ant-radio-wrapper:first-child {
+    .radio-icon {
+      padding: 6px 13px 6px 14px;
+    }
+  }
+
+  .ant-radio {
+    opacity: 0;
+  }
+
+  .ant-radio-checked {
+    opacity: 1;
+  }
+
+  span.ant-radio + * {
+    display: flex;
+    align-items: center;
+
+    padding-left: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .radio-icon {
+    padding: 10px 19px;
+
+    background: $gray-7;
+    border-radius: 6px;
+
+    font-size: 0;
+  }
+}
+
+.security-group {
+  display: flex;
+  align-items: flex-end;
+
+  width: 100%;
+}
+
+.plan {
+  padding: 20px 0 16px 0;
+  margin-bottom: 32px;
+
+  background: $white;
+  border: 1px solid $gray-8;
+  border-radius: 12px;
+}
+
+.bg-card {
+  width: 100%;
+
+  padding: 29px 0 70px;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  background-color: $gray-11;
+
+  z-index: 1;
+}
+
+.big-line {
+  height: 48px;
+
+  margin-bottom: 20px;
+
+  background-color: $gray-9;
+}
+
+.cvc > .w-100 {
+  width: max-content;
+}
+
+.credit-card {
+  max-width: 444px;
+
+  border: 1px solid $gray-8;
+  border-radius: 12px;
+}
+
+.addCard {
+  padding: 25px 24px 50px;
+
+  position: relative;
+
+  background-color: $white;
+
+  z-index: 10;
+
+  &__cardHolder {
+    max-width: calc(100% - 109px - 16px);
+    width: 100%;
+  }
+
+  &__date {
+    max-width: 109px;
+  }
+
+  &__cvc {
+    max-width: 79px;
+  }
+
+  &__cardNumber.input {
+    width: 100%;
+  }
+}
+
+.input-number {
+  max-width: 80px;
+
+  margin: 0 8px;
+}
+
+.bg-gray {
+  background-color: $gray-7;
+  border: none;
+
+  &:hover {
+    background-color: $gray-6;
+  }
+
+  svg path {
+    fill: $blue-0 !important;
+  }
+}
+
+.coupon-input {
+  max-width: 208px;
+}
+
+.focus-none:focus {
+  outline: none;
+}
+
+.pointer {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ant-modal-content {
+  .ant-alert--success.ant-alert--withoutClose {
+    padding: 12px !important;
+
+
+    .ant-alert-message {
+      font-size: 14px;
+    }
+  }
+}
+
+.card-number {
+  max-width: 214px;
+}
+
+.card-type {
+  max-width: 50px;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 11px 16px;
+
+  border: 1px solid $gray-8;
+  border-radius: 6px;
+}
+
+.wrong {
+  max-width: 561px;
+  width: 100%;
+
+  padding: 40px 40px;
+  margin: 0 12px;
+
+  background: $white;
+  border: 1px solid $gray-8;
+  border-radius: 6px;
+
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .payment-card__buttons {
+    flex-direction: column-reverse;
+
+    .button:last-child {
+      margin: 0 0 8px;
+    }
+  }
+
+  .payment-card.ant-radio-wrapper {
+    padding: 7px 24px 7px 16px;
+  }
+
+  .security-group {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .credit-card {
+    max-width: 100%
+  }
+
+  .addCard {
+    padding: 16px 12px;
+
+    &__cardHolder {
+      max-width: 100%;
+
+      margin-top: 12px;
+    }
+
+    &__date {
+      display: flex;
+
+      max-width: 100%;
+    }
+
+    &__cvc {
+      max-width: 100%;
+    }
+
+    &__expiration {
+      margin-right: 12px;
+
+      max-width: calc(100% - 12px);
+    }
+  }
+
+  .card-inputs {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .transaction {
+    padding: 11px 12px;
+  }
+
+  .input-number {
+    min-width: calc(100% - 112px);
+  }
+
+  .coupon-input {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .wrong {
+    padding: 40px 20px;
+  }
+}

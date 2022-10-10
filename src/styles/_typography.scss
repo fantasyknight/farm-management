@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'variables';
+
+html,
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  color: $black-1;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin: 0;
+
+  color: $black-1;
+}
+
+h1,
+.h1 {
+  font-size: 80px;
+  line-height: 1.4;
+}
+
+h2,
+.h2 {
+  font-size: 64px;
+  line-height: 1.41;
+}
+
+h3,
+.h3 {
+  font-size: 48px;
+  line-height: 1.37;
+}
+
+h4,
+.h4 {
+  font-size: 32px;
+  line-height: 1.37;
+}
+
+h5,
+.h5 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+h6,
+.h6 {
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.tx {
+  &-big {
+    font-size: 24px;
+  }
+
+  &-medium {
+    font-size: 20px;
+  }
+
+  &-normal {
+    font-size: 16px;
+  }
+
+  &-small {
+    font-size: 14px;
+  }
+
+  &-tiny {
+    font-size: 12px;
+  }
+}
+
+$tx-colors: (
+  '1': $black-0,
+  '2': $blue-0,
+  '3': $black-1,
+);
+
+@each $number, $color in $tx-colors {
+  .tx-color {
+    &-#{$number} {
+      color: #{$color};
+    }
+  }
+}
+
+$font-weights: (800, 700, 600, 500, 400, 300);
+
+@each $value in $font-weights {
+  .font-weight {
+    &-#{$value} {
+      font-weight: #{$value};
+    }
+  }
+}
+
+// Line heights
+$line-heights: (
+  '20': 2.0,
+  '16': 1.6,
+  '15': 1.5,
+  '143': 1.43,
+  '142': 1.42,
+  '14': 1.4,
+  '133': 1.33,
+);
+@each $number, $value in $line-heights {
+  .line-height {
+    &-#{$number} {
+      line-height: #{$value};
+    }
+  }
+}
+
+// Letter spacing
+$letter-spacings: (
+  '20': 2,
+  '05': 0.8,
+  '03': 0.48,
+  '02': 0.32,
+  '001': -0.16,
+);
+@each $number, $value in $letter-spacings {
+  .letter-spacing {
+    &-#{$number} {
+      letter-spacing: #{$value}px;
+    }
+  }
+}
+
+.caption, .paragrapgh, .title, .subtitle {
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--black-1 {
+    color: $black-0;
+  }
+
+  &--black-2 {
+    color: $gray-3;
+  }
+
+  &--black-3 {
+    color: $brand-1;
+  }
+
+  &--black-4 {
+    color: $black-2;
+  }
+
+  &--black-5 {
+    color: $black-1;
+  }
+
+  &--blue-1 {
+    color: $blue-0;
+  }
+
+  $font-weights: (700, 600, 500, 400);
+  @each $value in $font-weights {
+    &--#{$value} {
+      font-weight: #{$value};
+    }
+  }
+}

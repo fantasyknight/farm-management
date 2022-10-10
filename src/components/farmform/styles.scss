@@ -1,0 +1,81 @@
+@import '../../styles/variables';
+
+.farm-form {
+  padding-right: 38px;
+  padding-bottom: 50px;
+
+  width: 100%;
+  max-width: 620px;
+  min-height: 100%;
+
+  &__row {
+    padding-right: 34px;
+  }
+
+  &__area {
+    max-width: 210px;
+  }
+
+  &__buttons {
+    padding-top: 20px;
+    padding-right: 34px;
+  }
+
+  &__close-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+    svg path {
+      stroke: $gray-5;
+    }
+
+    &:hover {
+      svg path {
+        stroke: $red-1;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .farm-form {
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .farm-form {
+    padding-bottom: 20px;
+    padding-right: 0;
+
+    &__row {
+      padding-right: 0;
+    }
+
+    &__area {
+      max-width: 100%;
+    }
+
+    &__buttons {
+      flex-direction: column-reverse;
+
+      width: 100%;
+
+      padding-top: 0;
+      padding-right: 0;
+
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+    }
+  }
+
+}

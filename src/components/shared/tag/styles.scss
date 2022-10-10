@@ -1,0 +1,41 @@
+@import '../../../styles/variables';
+
+span.ant-tag {
+  padding: 4px 12px;
+  margin-right: 0;
+
+  height: max-content;
+
+  border-radius: 6px;
+  border: none;
+
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  line-height: 1.43;
+  font-weight: 500;
+
+  &--red {
+    background-color: $red-5;
+
+    color: $red-1;
+  }
+  &--orange {
+    background-color: $orange-6;
+
+    color: $orange-1;
+  }
+  &--gray {
+    background-color: $gray-13;
+
+    color: $black-1;
+
+    &:hover {
+      color: $black-1;
+    }
+  }
+  &--green {
+    background-color: $green-6;
+
+    color: $green-1;
+  }
+}

@@ -1,0 +1,65 @@
+@import 'variables';
+
+.ant-radio-inner {
+  width: 24px !important;
+  height: 24px !important;
+
+  border-color: $gray-9;
+  border-width: 2px;
+
+  &::after {
+    content: "";
+
+    width: 7px;
+    height: 11px;
+
+    position: absolute;
+    left: 7px;
+    top: 3px;
+
+    border: solid $white;
+    border-width: 0 2px 2px 0;
+    border-radius: 0;
+    background-color: $blue-0 !important;
+
+    transform: rotate(45deg) !important;
+  }
+}
+
+.ant-radio-wrapper-error {
+  &:hover, .ant-radio:hover, .ant-radio-inner {
+    border-color: $red-1 !important;
+    border-width: 2px;
+  }
+
+  .ant-radio-checked .ant-radio-inner, .ant-radio-inner::after {
+    background-color: $red-1 !important;
+  }
+}
+
+.ant-radio-wrapper:hover .ant-radio, .ant-radio:hover .ant-radio-inner {
+  border-color: $black-3;
+}
+
+.ant-radio-disabled .ant-radio-inner {
+  border-color: $gray-9 !important;
+  background-color: $gray-10;
+}
+
+span.ant-radio + * {
+  padding-left: 12px;
+}
+
+.ant-radio-wrapper {
+  display: flex ;
+  align-items: center;
+}
+
+.ant-radio-checked .ant-radio-inner {
+  border-color: $blue-0;
+  background-color: $blue-0;
+}
+
+.radio-icon {
+  margin-right: 20px;
+}

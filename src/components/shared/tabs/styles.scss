@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+
+div.ant-tabs-tab {
+  margin: 0 20px 0 0;
+  padding: 8px 4px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: $gray-3;
+
+
+    &.ant-tabs-tab-active .ant-tabs-tab-btn {
+      color: $blue-0;
+    }
+}
+
+div.ant-tabs-top > .ant-tabs-nav::before, .ant-tabs-top > div > .ant-tabs-nav::before {
+  border-bottom: 1px solid $gray-9;
+}
+
+div.ant-tabs-ink-bar {
+  background: $blue-0;
+}
+
+@media screen and (max-width: 768px) {
+  div.ant-tabs-tab {
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  div.ant-tabs-nav-list {
+    width: 100%
+  }
+}

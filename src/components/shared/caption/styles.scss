@@ -1,0 +1,20 @@
+.caption {
+  text-transform: uppercase;
+
+  &--1 {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  &--2 {
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.05em;
+  }
+
+  &--3 {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    line-height: 2.0;
+  }
+}

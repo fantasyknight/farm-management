@@ -1,0 +1,83 @@
+image: node:14.15.1
+
+options:
+  size: 2x
+
+definitions:
+  services:
+    docker:
+      memory: 7128
+
+pipelines:
+  branches:
+    develop:
+      - step:
+          name: Set env
+          script:
+            - cp .env.example .env
+            - sed -i "s|REACT_APP_API_URL=|REACT_APP_API_URL=https://api.mf.dev.outright.xyz/|g" .env
+            - sed -i "s|REACT_APP_GOOGLE_MAP_KEY=|REACT_APP_GOOGLE_MAP_KEY=AIzaSyDLa-5lnf9Reg-5ysvns1vp2r00QCIQMVk|g" .env
+          artifacts:
+            - .env
+      - step:
+          name: Build
+          size: 2x
+          script:
+            - export IMAGE_NAME=$DOCKER_HUB_USERNAME/$APPLICATION_NAME:$BITBUCKET_COMMIT
+            - docker build -t $IMAGE_NAME .
+            - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
+            - docker push $IMAGE_NAME
+          services:
+            - docker
+      - step:
+          name: Deploy
+          deployment: test
+          script:
+            - sed -i "s|{{image}}|$DOCKER_HUB_USERNAME/$APPLICATION_NAME:$BITBUCKET_COMMIT|g" deployment.dev.yaml
+            - sed -i "s|{{host}}|$DEV_URL|g" deployment.dev.yaml
+            - sed -i "s|{{dockerconfigjson}}|$dockerconfigjson|g" deployment.dev.yaml
+            - sed -i "s|{{env}}|test|g" deployment.dev.yaml
+            - pipe: atlassian/google-gke-kubectl-run:1.3.0
+              variables:
+                KEY_FILE: $GCLOUD_API_KEYFILE
+                PROJECT: $GCLOUD_PROJECT
+                COMPUTE_ZONE: $GCLOUD_COMPUTE_ZONE
+                CLUSTER_NAME: $GCLOUD_CLUSTER_NAME
+                KUBECTL_COMMAND: 'apply'
+                RESOURCE_PATH: 'deployment.dev.yaml'
+    stable:
+      - step:
+          name: Set env
+          script:
+            - cp .env.example .env
+            - sed -i "s|REACT_APP_API_URL=|REACT_APP_API_URL=https://marine-farming-api.outright.xyz/|g" .env
+            - sed -i "s|REACT_APP_GOOGLE_MAP_KEY=|REACT_APP_GOOGLE_MAP_KEY=AIzaSyDLa-5lnf9Reg-5ysvns1vp2r00QCIQMVk|g" .env
+          artifacts:
+            - .env
+      - step:
+          name: Build
+          size: 2x
+          script:
+            - export IMAGE_NAME=$DOCKER_HUB_USERNAME/$APPLICATION_NAME:$BITBUCKET_COMMIT
+            - docker build -t $IMAGE_NAME .
+            - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
+            - docker push $IMAGE_NAME
+          services:
+            - docker
+      - step:
+          name: Deploy
+          deployment: staging
+          script:
+            - sed -i "s|{{image}}|$DOCKER_HUB_USERNAME/$APPLICATION_NAME:$BITBUCKET_COMMIT|g" deployment.yaml
+            - sed -i "s|{{host}}|$STAGING_URL|g" deployment.yaml
+            - sed -i "s|{{dockerconfigjson}}|$dockerconfigjson|g" deployment.yaml
+            - sed -i "s|{{env}}|staging|g" deployment.yaml
+            - pipe: atlassian/google-gke-kubectl-run:1.3.0
+              variables:
+                KEY_FILE: $GCLOUD_API_KEYFILE
+                PROJECT: $GCLOUD_PROJECT
+                COMPUTE_ZONE: $GCLOUD_COMPUTE_ZONE
+                CLUSTER_NAME: $GCLOUD_CLUSTER_NAME
+                KUBECTL_COMMAND: 'apply'
+                RESOURCE_PATH: 'deployment.yaml'
+

@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+
+span.ant-avatar {
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &--blue {
+    background-color: $blue-1;
+  }
+}

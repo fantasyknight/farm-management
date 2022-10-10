@@ -1,0 +1,13 @@
+@import '../../../styles/variables';
+
+.positiv-negativ-title {
+
+
+  &--fair {
+    color: $red-1;
+  }
+
+  &--good {
+    color: $green-1;
+  }
+}

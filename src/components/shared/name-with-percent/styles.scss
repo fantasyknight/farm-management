@@ -1,0 +1,26 @@
+@import '../../../styles/variables';
+
+.name-percent {
+  display: flex;
+  justify-content: center;
+
+  width: 71px;
+
+  padding: 2px 8px;
+
+  border-radius: 200px;
+
+  background: rgba(249, 174, 0, 0.08);
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+
+  span {
+    padding: 0 4px;
+  }
+
+  &--next-color {
+    background: rgba(185, 127, 243, 0.08);
+  }
+}

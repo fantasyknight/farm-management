@@ -1,0 +1,40 @@
+@import '../../../styles/variables';
+
+ul.ant-menu {
+  background-color: $white;
+}
+
+ul.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected,
+ul.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:hover {
+  background-color: $white;
+
+  .paragrapgh {
+    color: $blue-0;
+  }
+
+  svg path {
+    fill: $blue-0;
+  }
+}
+
+ul.ant-menu:not(.ant-menu-horizontal) .ant-menu-item {
+  display: flex;
+  align-items: center;
+}
+
+ul.ant-menu-vertical .ant-menu-item:not(:last-child), .ant-menu-vertical-left .ant-menu-item:not(:last-child), .ant-menu-vertical-right .ant-menu-item:not(:last-child), .ant-menu-inline .ant-menu-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
+  border-right: none !important;
+}
+
+ul.ant-menu, ul.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected, ul.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:hover {
+  background-color: $white;
+}
+
+ul.ant-menu {
+  max-width: 210px;
+  width: 100%;
+}

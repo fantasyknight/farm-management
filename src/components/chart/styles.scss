@@ -1,0 +1,177 @@
+@import '../../styles/variables';
+
+.chart-card {
+  padding: 20px 30px 24px 20px;
+
+  background-color: $white;
+  border-radius: 12px;
+
+  &__labels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 391px;
+    width: 100%;
+
+    @media screen and (max-width: 800px){
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 600px){
+      & > div > p {
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: -0.01em;
+      }
+    }
+  }
+
+  &__line {
+    width: 30px;
+    height: 3px;
+
+    border-radius: 12px;
+
+    &--harvest {
+      background-color: $green-8;
+    }
+
+    &--seeding {
+      background-color: $orange-2;
+    }
+
+    &--assessment {
+      background-color: $red-2;
+    }
+  }
+}
+
+.line {
+  fill: none;
+  stroke-width: 3px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.hover-line {
+  stroke: #B74779;
+  stroke-width: 2px;
+  stroke-dasharray: 3,3;
+}
+
+.domain {
+  opacity: 0;
+}
+
+.y.axis {
+  .tick line {
+    stroke: $gray-14;
+  }
+
+  .tick text {
+    fill: $gray-3;
+
+    font-size: 14px;
+  }
+}
+
+.x.axis {
+  .tick text {
+    fill: $gray-3;
+
+    font-size: 14px;
+  }
+}
+
+.mouse-over-effects {
+  .mouse-line {
+    stroke: rgba(7, 104, 159, 0.72);
+    stroke-width: 1px;
+    stroke-dasharray: 3;
+  }
+}
+
+.circle {
+  fill: rgba(7, 104, 159, 0.72);
+
+  stroke: $white;
+  stroke-width: 4px;
+}
+
+.line.harvest {
+  stroke: $green-8;
+}
+
+.line.seedings {
+  stroke: $orange-2;
+}
+
+.line.assessments {
+  stroke: $red-2;
+}
+
+.tooltipCart {
+  padding: 8px 14px;
+  width: 186px;
+
+  position: absolute;
+
+  background: $white;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+
+  pointer-events: none;
+
+  &:before, &:after {
+    content: '';
+
+    position: absolute;
+    left: 45%;
+    bottom: -20px;
+
+    border: 10px solid transparent;
+    border-top: 10px solid $white;
+  }
+  &:after {
+    bottom: -19px;
+
+    border-top: 10px solid $white;
+  }
+
+  .title {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1.33;
+    color: $gray-3;
+  }
+
+  .item, .date {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: -0.01em;
+  }
+
+  .item {
+    margin-bottom: 4px;
+  }
+
+  .date {
+    margin-bottom: 0;
+
+    color: $gray-4;
+  }
+}
+
+#chart {
+  margin-top: -30px;
+  @media screen and (max-width: 800px){
+    overflow: scroll;
+  }
+}

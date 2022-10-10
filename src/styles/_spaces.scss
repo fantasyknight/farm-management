@@ -1,0 +1,78 @@
+$spaces: (
+  0,
+  3,
+  4,
+  6,
+  7,
+  8,
+  10,
+  12,
+  14,
+  15,
+  16,
+  17,
+  18,
+  20,
+  21,
+  22,
+  23,
+  25,
+  24,
+  27,
+  26,
+  28,
+  30,
+  32,
+  34,
+  36,
+  40,
+  48,
+  39,
+  52,
+  62,
+  70,
+  100
+);
+
+@each $value in $spaces {
+  .mt {
+    &-#{$value} {
+      margin-top: #{$value}px;
+    }
+  }
+  .mb {
+    &-#{$value} {
+      margin-bottom: #{$value}px;
+    }
+  }
+  .ml {
+    &-#{$value} {
+      margin-left: #{$value}px;
+    }
+  }
+  .mr {
+    &-#{$value} {
+      margin-right: #{$value}px;
+    }
+  }
+  .pt {
+    &-#{$value} {
+      padding-top: #{$value}px;
+    }
+  }
+  .pb {
+    &-#{$value} {
+      padding-bottom: #{$value}px;
+    }
+  }
+  .pl {
+    &-#{$value} {
+      padding-left: #{$value}px;
+    }
+  }
+  .pr {
+    &-#{$value} {
+      padding-right: #{$value}px;
+    }
+  }
+}

@@ -1,0 +1,334 @@
+@import '../../../styles/variables';
+
+.button {
+  border-radius: 4px;
+  border: none;
+
+  color: $white;
+
+  font-family: Inter, serif;
+  font-style: normal;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--wide {
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  &--middle {
+    min-width: 185px;
+  }
+
+  &--normal {
+    min-width: 163px;
+  }
+
+  &--small {
+    min-width: 109px;
+  }
+
+  &--0 {
+    padding: 4px 0;
+  }
+
+  &--1 {
+    padding: 12px 16px;
+  }
+
+  &--2 {
+    padding: 10px 16px;
+  }
+
+  &--3 {
+    padding: 8px 16px;
+  }
+
+  &--4 {
+    padding: 12px 24px;
+  }
+
+  &--bordered {
+
+    &.button--1 {
+      padding: 11px 16px;
+      margin: 3px 5px;
+    }
+
+    &.button--2 {
+      padding: 9px 16px;
+      margin: 3px 5px;
+    }
+
+    &.button--3 {
+      padding: 7px 16px;
+      margin: 3px 5px;
+    }
+
+    &.button--4 {
+      padding: 11px 24px;
+      margin: 3px 5px;
+    }
+
+    &.button--blue {
+      background-color: $white;
+      border: 1px solid $gray-9;
+
+      color: $blue-0;
+
+      &.button--rightIcon path, &.button--leftIcon path, &.button--onlyIcon path {
+        fill: $blue-0;
+      }
+
+      &:hover {
+        background-color: $blue-6;
+
+        color: $blue-0;
+      }
+    }
+
+    &.button--red {
+      background-color: $white;
+      border: 1px solid $red-1;
+
+      color: $red-1;
+
+      &.button--rightIcon path, &.button--leftIcon path{
+        fill: $red-1;
+      }
+
+      &:hover {
+        background-color: $red-4;
+      }
+    }
+
+    &.button--green {
+      background-color: $white;
+      border: 1px solid $green-1;
+
+      color: $green-1;
+
+      &.button--rightIcon path, &.button--leftIcon path{
+        fill: $green-1;
+      }
+
+      &:hover {
+        background-color: $green-4;
+      }
+    }
+
+    &.button--orange {
+      background-color: $white;
+      border: 1px solid $orange-3;
+      color: $orange-3;
+
+      &:hover {
+        background-color: $orange-4;
+      }
+    }
+  }
+
+  &--transparent {
+    background-color: $white !important;
+    border-color: $white;
+
+    &.button--blue {
+      color: $gray-3;
+
+      &.button--rightIcon path, &.button--leftIcon path{
+        fill: $gray-3;
+      }
+
+      &:hover {
+        color: $gray-4;
+
+        &.button--rightIcon path, &.button--leftIcon path{
+          fill: $gray-4;
+        }
+      }
+    }
+
+    &.button--red {
+      color: $red-1;
+
+      &.button--rightIcon path, &.button--leftIcon path{
+        fill: $red-1;
+      }
+
+      &:hover {
+        color: $dark-red-2;
+
+        &.button--rightIcon path, &.button--leftIcon path{
+          fill: $dark-red-2;
+        }
+      }
+    }
+
+    &.button--green {
+      color: $green-1;
+
+      &.button--rightIcon path, &.button--leftIcon path{
+        fill: $green-1;
+      }
+
+      &:hover {
+        color: $green-2;
+
+        &.button--rightIcon path, &.button--leftIcon path{
+          fill: $green-2;
+        }
+      }
+    }
+
+    &.button--orange {
+      &:hover {
+        color: $black-2;
+
+        &.button--rightIcon path, &.button--leftIcon path{
+          fill: $black-2;
+        }
+      }
+    }
+
+    &.button--disabled {
+      background: $white;
+
+      color: $black-2;
+
+      &.button--rightIcon path, &.button--leftIcon path{
+        fill: $black-2;
+      }
+    }
+  }
+
+  &--rightIcon, &--leftIcon {
+    display: flex;
+    align-items: center;
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  &.button--onlyIcon path {
+    fill: $white;
+  }
+
+  &--onlyIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 48px;
+    width: 48px;
+
+    background-color: $white;
+    border: 1px solid $gray-8;
+
+    text-align: center;
+
+    &:hover {
+      background: $gray-7;
+    }
+  }
+
+  &--blue {
+    background-color: $blue-0;
+
+
+    &:hover {
+      background-color: $blue-1;
+    }
+  }
+
+  &--red {
+    background-color: $red-1;
+
+    &:hover {
+      background-color: $dark-red-1;
+    }
+  }
+
+  &--green {
+    background-color: $green-1;
+
+    &:hover {
+      background-color: $green-0;
+    }
+  }
+
+  &--orange {
+    background-color: $orange-3;
+
+    color: $black-1;
+
+    &.button--rightIcon path, &.button--leftIcon path{
+      fill: $black-1;
+    }
+
+    &:hover {
+      background-color: $orange-2;
+    }
+  }
+
+  &--disabled {
+    background: $gray-9 !important;
+    border: none !important;
+
+    color: $black-2 !important;
+
+    &.button--rightIcon path, &.button--leftIcon path, &.button--onlyIcon path{
+      fill: $black-2 !important;
+    }
+
+    cursor: not-allowed;
+  }
+
+  &--disabled-icon {
+    background: inherit !important;
+  }
+
+  //&--disabled, &--disabled:hover {
+  //  background: $gray-9 !important;
+  //  border: none !important;
+  //
+  //  color: $black-2 !important;
+  //
+  //  &.button--rightIcon path, &.button--leftIcon path{
+  //    fill: $black-2;
+  //  }
+  //
+  //  cursor: not-allowed;
+  //}
+
+  &.button--border-none {
+    border: none;
+
+    &.button--blue {
+      &:hover {
+        background-color: $white;
+
+          color: $blue-3;
+
+        &.button--rightIcon path, &.button--leftIcon path{
+          fill: $blue-3;
+        }
+      }
+    }
+  }
+
+  &.bg-transparent, &.bg-transparent:hover {
+    background-color: transparent !important;
+  }
+}

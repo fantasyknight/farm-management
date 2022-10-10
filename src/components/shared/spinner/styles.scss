@@ -1,0 +1,40 @@
+@import '../../../styles/variables';
+
+.spinner__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+
+  z-index: 99999;
+
+  &--global {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: $white;
+  }
+}
+
+.spinner {
+  display: inline-block;
+
+  width: 3rem;
+  height: 3rem;
+
+  border: 4px solid rgba(250,250,250,1);
+  border-top: 4px solid rgb(0,142,209);
+  border-radius: 50%;
+
+  animation: 2s spin linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

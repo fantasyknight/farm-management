@@ -1,0 +1,49 @@
+@import 'variables';
+
+.ant-switch {
+  min-width: 48px;
+  height: 28px;
+
+  .ant-switch-handle {
+    height: 20px;
+    width: 20px;
+  }
+
+  &.ant-switch-checked .ant-switch-handle {
+    left: calc(100% - 25px);
+  }
+}
+
+.ant-switch-handle {
+  top: 4px;
+  left: 5px;
+}
+
+.ant-switch {
+  background-color: $gray-5;
+
+  &:hover {
+    background-color: $blue-0;
+  }
+}
+
+.ant-switch-checked {
+  background-color: $blue-0;
+}
+
+.ant-switch-disabled {
+  background-color: $gray-9;
+}
+
+.ant-switch-label {
+  margin-bottom: 0;
+  padding: 0 12px;
+}
+
+.ant-switch-label--small {
+  font-size: 14px;
+}
+
+p.ant-switch-label {
+  padding: 0;
+}

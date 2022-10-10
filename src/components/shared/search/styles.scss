@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+
+.search {
+  max-width:308px;
+  width: 100%;
+
+  position: relative;
+
+  .input {
+    background-color: $gray-11;
+    border-radius: 20px;
+    border: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    max-width: 100%;
+  }
+}

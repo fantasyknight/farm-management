@@ -1,0 +1,85 @@
+@import '../../../styles/variables';
+
+div.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon, {
+  background: $blue-0;
+}
+div.ant-steps-item-process .ant-steps-item-icon {
+  border-color: $blue-0;
+}
+.ant-steps-item-title::after {
+  content: none !important;
+}
+
+div.ant-steps-vertical > .ant-steps-item:not(:last-child) > .ant-steps-item-container > .ant-steps-item-tail {
+  display: none;
+}
+
+div.ant-steps-item-finish .ant-steps-item-icon {
+  background-color: $gray-10;
+  border: none;
+}
+
+div.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+  color: $gray-3;
+}
+
+div.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon {
+  border: 2px solid $blue-0;
+  background-color: $white;
+}
+
+div.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon .ant-steps-icon {
+  top: -2px;
+
+  color: $blue-0;
+}
+
+div.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+  color: $blue-0;
+
+  font-weight: 500;
+}
+
+div.ant-steps-item-icon {
+  margin: 0 12px 0 0;
+}
+
+div.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+  color: $gray-3;
+}
+
+div.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+  color: $black-1;
+}
+
+div.ant-steps-item-wait .ant-steps-item-icon {
+  background-color: $gray-7;
+  border: none;
+}
+
+div.ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon {
+  color: $black-1;
+}
+
+div.ant-steps-vertical > .ant-steps-item .ant-steps-item-content {
+  min-height: auto;
+}
+
+div.ant-steps .ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process) > .ant-steps-item-container[role='button']:hover .ant-steps-item-icon .ant-steps-icon,
+div.ant-steps .ant-steps-item:not(.ant-steps-item-active) > .ant-steps-item-container[role='button']:hover .ant-steps-item-title {
+  color: $blue-0;
+}
+
+div.ant-steps.ant-steps-vertical {
+  width: max-content;
+}
+
+div.ant-steps-item-container {
+  margin-bottom: 36px;
+}
+
+@media screen and (max-width: 768px) {
+  .ant-steps-vertical {
+    flex-direction: row !important;
+  }
+}

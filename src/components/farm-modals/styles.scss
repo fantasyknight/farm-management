@@ -1,0 +1,25 @@
+.assessment-modal {
+  &__condition {
+    padding-top: 17px;
+    padding-bottom: 17px;
+
+    &-item {
+      max-width: 149px;
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .assessment-modal {
+    &__condition {
+      flex-direction: column;
+
+      padding-top: 0;
+
+      &-item {
+        padding-top: 16px;
+        max-width: 100%;
+      }
+    }
+  }
+}

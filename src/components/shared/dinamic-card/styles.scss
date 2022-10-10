@@ -1,0 +1,141 @@
+@import '../../../styles/variables';
+
+.dynamicCard {
+  max-width: calc((100% - 24px ) / 2);
+  width: 100%;
+
+  padding: 16px 12px 14px 16px;
+
+  background-color: $white;
+  border-radius: 12px;
+
+  &:nth-last-child(2n) {
+    margin-right: 24px;
+  }
+
+  &:nth-child(1) {
+    margin-bottom: 24px;
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 24px;
+  }
+
+  .dynamic-button {
+    display: none;
+  }
+
+  .dynamic-button + .dynamic-label::after {
+    content:"";
+
+    display: block;
+
+    height: 24px;
+    width: 6px;
+
+    margin-top: 4px;
+
+    border-radius: 20px;
+    background-color: $brand-3;
+
+    transition: all 0.3s;
+  }
+
+  .dynamic-button + .dynamic-label::before {
+    content:"";
+
+    display: block;
+
+    height: 16px;
+    width: 6px;
+
+    border-radius: 20px;
+    background-color: rgba(7, 104, 159, 0.16);
+
+    transition: all 0.3s;
+  }
+
+  .dynamic-button:checked + .dynamic-label::after {
+    height: 16px;
+
+    background-color: rgba(7, 104, 159, 0.16);
+  }
+  .dynamic-button:checked + .dynamic-label::before {
+    height: 24px;
+
+    background-color: $brand-3;
+  }
+
+  .dynamic-label {
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  @media screen and (max-width: 1400px){
+    &:not(:nth-last-child(1)) {
+      margin-right: 12px;
+    }
+    &:nth-child(1) {
+      margin-bottom: unset;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: unset;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    & > div > p {
+      margin-bottom: 7px;
+    }
+    & > div > h4 {
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+
+    max-width: calc((100% - 12px ) / 2);
+
+    &:nth-child(1) {
+      margin-bottom: 12px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 12px;
+    }
+
+    &:not(:nth-last-child(1)) {
+      margin-right: unset;
+    }
+    &:nth-last-child(2n) {
+      margin-right: 12px;
+    }
+  }
+}
+
+@media screen and ( max-width: 768px ) {
+  .dynamicCard {
+      width: 210px;
+
+      &:nth-last-child(2n) {
+        margin-right: 12px;
+      }
+
+      &:nth-child(1) {
+        margin-bottom: 12px;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 12px;
+      }
+  }
+}
+
+

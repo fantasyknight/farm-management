@@ -1,0 +1,98 @@
+.table-mobile {
+  &__header {
+    padding: 16px 19px 15px 12px;
+
+    border-radius: 12px;
+    background: #FFFFFF;
+  }
+
+  &__card {
+    padding: 21px 15px 15px 12px;
+
+    margin-bottom: 12px;
+
+    position: relative;
+
+    background: #FFFFFF;
+
+    border-radius: 12px;
+
+    &-dots {
+      position: absolute;
+      top: 16px;
+      right: 19px;
+    }
+
+    &--cursor {
+      cursor: pointer;
+    }
+  }
+
+  &__not-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px 0;
+
+    margin-bottom: 12px;
+
+    border-radius: 12px;
+
+    background: #FFFFFF;
+  }
+
+  // custom style for antd
+
+  .ant-collapse {
+    background-color: inherit;
+    border: none ;
+  }
+
+  .ant-collapse-content {
+    border: none;
+  }
+
+  .ant-collapse > .ant-collapse-item {
+    border: none;
+  }
+
+
+  .table-mobile__headerdiv.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    border-radius: 12px;
+  }
+
+
+  div.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    margin-bottom: 12px !important;
+
+    border: none !important;
+    background-color: inherit !important;
+
+  }
+
+  .ant-collapse-item .ant-collapse-header {
+    padding: 0 !important;
+  }
+
+  .ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+    padding: 10px 12px 26px 6px;
+
+    position: absolute;
+    top: 16px;
+    left: 12px;
+  }
+
+  .ant-collapse-content.ant-collapse-content-active {
+    border-radius: 12px;
+    background-color: inherit;
+  }
+
+  .ant-collapse-content-box {
+    padding: 0 !important;
+
+  }
+
+
+}
+

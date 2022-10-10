@@ -1,0 +1,91 @@
+@import '../../styles/variables';
+
+.add-line {
+  padding-top: 37px;
+}
+
+.budget {
+  &__wrapper {
+    max-width: 353px;
+    width: 100%;
+  }
+
+  &__price-wrapper {
+    max-width: 192px;
+  }
+
+  &__close-icon {
+    position: absolute;
+    right: -30px;
+    bottom: 15px;
+
+    font-size: 0;
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+    svg path {
+      stroke: $gray-5;
+    }
+
+    &:hover {
+      svg path {
+        stroke: $red-1;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__seeding, &__maintenance {
+    .ant-checkbox-wrapper .paragrapgh,
+    .ant-radio-group .paragrapgh, 
+    .ant-radio-group .dropdown__label {
+      display: block !important;
+    }
+  }
+
+  &__seeding:not(:first-of-type), &__maintenance:not(:first-of-type) {
+    .paragrapgh, .dropdown__label {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .add-line {
+    flex-direction: column;
+
+    padding-top: 6px;
+  }
+
+  .line-button {
+    flex-direction: column-reverse;
+
+    .button {
+      margin: 0 0 30px;
+
+      &:last-child {
+        margin: 0 0 8px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .budget {
+    &__close-icon {
+      right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .budget {
+    &__close-icon {
+      right: 0;
+    }
+  }
+}

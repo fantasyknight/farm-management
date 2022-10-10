@@ -1,0 +1,148 @@
+.todo {
+  width: 100%;
+  margin-top: 14px;
+
+  .ant-checkbox + span {
+    padding-left: 16px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    span.ant-radio + * {
+      padding-left: 0px;
+      padding-right: 6px;
+    }
+    .info-row {
+      cursor: pointer;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .ant-radio-group .paragrapgh--1 {
+      font-size: 15px;
+    }
+    .ant-radio-group .paragrapgh--2 {
+      font-size: 13px;
+    }
+
+    svg {
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .taskDetail {
+      color: #555;
+      text-align: right;
+      margin-right: 10px;
+    }
+  }
+
+  .paragrapgh--400 {
+    font-weight: 500;
+  }
+
+  &__close-icon {
+    font-size: 0;
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  .taskCreator {
+    text-transform: uppercase;
+    margin-left: 5px;
+  }
+
+  .todolist__item {
+    display: flex;
+    align-items: center;
+
+    span.ant-radio + * {
+      padding-left: 0px;
+      padding-right: 6px;
+    }
+    .info-row {
+      cursor: pointer;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .ant-radio-group .paragrapgh--1 {
+      font-size: 15px;
+    }
+    .ant-radio-group .paragrapgh--2 {
+      font-size: 13px;
+    }
+
+    svg {
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .taskDetail {
+      color: #555;
+      text-align: right;
+      margin-right: 10px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .todo__item {
+    .info-row > div {
+      flex-direction: column;
+      align-items: flex-start;
+      .due_date_tag {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+.viewTask {
+  color: #008ED1 !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.viewTaskModal {
+  .input--disabled,
+  .ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+  .ant-picker-disabled div.ant-picker-input > input {
+    cursor: auto;
+    background: #ffffff;
+    color: #1b1a1a;
+  }
+  .ant-picker-disabled div.ant-picker-input > input {
+    border: 1px solid #EFEFEF;
+    border-radius: 4px;
+  }
+  .ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector input {
+    cursor: auto;
+  }
+}
+
+.todo__item {
+  .ant-checkbox-inner {
+    border-radius: 50% !important;
+  }
+  .ant-checkbox-checked::after {
+    border-radius: 50% !important;
+  }
+}
+
+.due_date_tag {
+  font-size: 12px !important;
+  border-radius: 2px !important;
+  span {
+    padding: 0px 7px;
+    font-size: 12px;
+    border-radius: 2px;
+  }
+}

@@ -1,0 +1,34 @@
+@import '../../../styles/variables';
+
+.subtitle {
+    &--1 {
+      font-size: 20px;
+      line-height: 1.40;
+      letter-spacing: -0.01em;
+    }
+    &--2 {
+      font-size: 24px;
+      line-height: 1.42;
+      letter-spacing: -0.01em;
+    }
+    &--3 {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -0.01em;
+    }
+    &--4 {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    &--5 {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+    }
+
+  &--disabled {
+    color: $black-2;
+  }
+}

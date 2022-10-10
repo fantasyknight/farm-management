@@ -1,0 +1,15 @@
+.caret {
+  transition: all 0.3s;
+
+  &--top {
+    transform: rotate(-90deg);
+  }
+
+  &--left {
+    transform: rotate(180deg);
+  }
+  &--bottom {
+    transform: rotate(90deg);
+  }
+
+}
